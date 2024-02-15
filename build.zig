@@ -31,6 +31,7 @@ pub fn build(b: *Build) void {
         .target = target,
         .optimize = optimize,
     });
+    lib.linkage = .dynamic;
 
     setupOdbcDependencies(lib);
 
